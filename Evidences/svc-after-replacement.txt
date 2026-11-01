@@ -1,0 +1,2 @@
+NAME                TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)   AGE
+inventory-service   ClusterIP   10.110.64.237   <none>        80/TCP    42m

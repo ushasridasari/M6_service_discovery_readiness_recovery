@@ -1,0 +1,4 @@
+NAME                                READY   STATUS    RESTARTS   AGE     IP           NODE       NOMINATED NODE   READINESS GATES
+inventory-797b767889-cx9vn          1/1     Running   0          8m44s   10.244.0.6   minikube   <none>           <none>
+inventory-797b767889-rqz59          1/1     Running   0          42m     10.244.0.4   minikube   <none>           <none>
+inventory-client-6cfc648495-cdjgn   1/1     Running   0          42m     10.244.0.5   minikube   <none>           <none>

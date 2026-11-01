@@ -1,0 +1,25 @@
+LAST SEEN   TYPE      REASON              OBJECT                                   MESSAGE
+42m         Normal    Scheduled           pod/inventory-797b767889-rqz59           Successfully assigned default/inventory-797b767889-rqz59 to minikube
+42m         Normal    ScalingReplicaSet   deployment/inventory                     Scaled up replica set inventory-797b767889 from 0 to 2
+42m         Normal    ScalingReplicaSet   deployment/inventory-client              Scaled up replica set inventory-client-6cfc648495 from 0 to 1
+42m         Normal    SuccessfulCreate    replicaset/inventory-client-6cfc648495   Created pod: inventory-client-6cfc648495-cdjgn
+42m         Normal    Scheduled           pod/inventory-797b767889-g6qrz           Successfully assigned default/inventory-797b767889-g6qrz to minikube
+42m         Normal    Scheduled           pod/inventory-client-6cfc648495-cdjgn    Successfully assigned default/inventory-client-6cfc648495-cdjgn to minikube
+42m         Normal    SuccessfulCreate    replicaset/inventory-797b767889          Created pod: inventory-797b767889-rqz59
+42m         Normal    SuccessfulCreate    replicaset/inventory-797b767889          Created pod: inventory-797b767889-g6qrz
+42m         Normal    Created             pod/inventory-797b767889-rqz59           Container created
+42m         Normal    Pulled              pod/inventory-client-6cfc648495-cdjgn    Container image "inventory-client:1.0" already present on machine and can be accessed by the pod
+42m         Normal    Started             pod/inventory-client-6cfc648495-cdjgn    Container started
+42m         Normal    Pulled              pod/inventory-797b767889-rqz59           Container image "inventory-app:1.0" already present on machine and can be accessed by the pod
+42m         Normal    Created             pod/inventory-client-6cfc648495-cdjgn    Container created
+42m         Normal    Started             pod/inventory-797b767889-rqz59           Container started
+42m         Normal    Started             pod/inventory-797b767889-g6qrz           Container started
+42m         Normal    Created             pod/inventory-797b767889-g6qrz           Container created
+42m         Normal    Pulled              pod/inventory-797b767889-g6qrz           Container image "inventory-app:1.0" already present on machine and can be accessed by the pod
+16m         Warning   Unhealthy           pod/inventory-797b767889-g6qrz           Readiness probe failed: HTTP probe failed with statuscode: 503
+8m44s       Normal    SuccessfulCreate    replicaset/inventory-797b767889          Created pod: inventory-797b767889-cx9vn
+8m44s       Normal    Killing             pod/inventory-797b767889-g6qrz           Stopping container inventory
+8m44s       Normal    Scheduled           pod/inventory-797b767889-cx9vn           Successfully assigned default/inventory-797b767889-cx9vn to minikube
+8m44s       Normal    Started             pod/inventory-797b767889-cx9vn           Container started
+8m44s       Normal    Created             pod/inventory-797b767889-cx9vn           Container created
+8m44s       Normal    Pulled              pod/inventory-797b767889-cx9vn           Container image "inventory-app:1.0" already present on machine and can be accessed by the pod

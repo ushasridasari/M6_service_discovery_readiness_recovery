@@ -1,0 +1,4 @@
+NAME                                READY   STATUS    RESTARTS   AGE
+inventory-797b767889-g6qrz          1/1     Running   0          29m
+inventory-797b767889-rqz59          1/1     Running   0          29m
+inventory-client-6cfc648495-cdjgn   1/1     Running   0          29m

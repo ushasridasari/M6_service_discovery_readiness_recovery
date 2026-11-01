@@ -1,0 +1,2 @@
+ 407 pod=inventory-797b767889-g6qrz
+ 379 pod=inventory-797b767889-rqz59

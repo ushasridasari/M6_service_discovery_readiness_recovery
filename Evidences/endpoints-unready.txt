@@ -1,0 +1,2 @@
+NAME                ENDPOINTS         AGE
+inventory-service   10.244.0.4:8080   22m

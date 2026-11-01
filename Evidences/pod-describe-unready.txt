@@ -1,0 +1,57 @@
+Name:             inventory-797b767889-g6qrz
+Namespace:        default
+Priority:         0
+Service Account:  default
+Node:             minikube/192.168.49.2
+Start Time:       Sat, 31 Oct 2026 16:42:06 -0700
+Labels:           app=inventory
+                  pod-template-hash=797b767889
+Annotations:      <none>
+Status:           Running
+IP:               10.244.0.3
+IPs:
+  IP:           10.244.0.3
+Controlled By:  ReplicaSet/inventory-797b767889
+Containers:
+  inventory:
+    Container ID:   containerd://93628c818ebb75a4bae2f579c50591cbe5d437c2a0c902e435475c1e189f9a45
+    Image:          inventory-app:1.0
+    Image ID:       sha256:0c2f6f0cc96fba141dc5354cc58b8216d3d93533a6611876bfea426fc012c2d4
+    Port:           8080/TCP
+    Host Port:      0/TCP
+    State:          Running
+      Started:      Sat, 31 Oct 2026 16:42:07 -0700
+    Ready:          False
+    Restart Count:  0
+    Liveness:       http-get http://:8080/healthz delay=5s timeout=1s period=10s successThreshold=1 failureThreshold=3
+    Readiness:      http-get http://:8080/ready delay=3s timeout=1s period=3s successThreshold=1 failureThreshold=1
+    Environment:
+      POD_NAME:  inventory-797b767889-g6qrz (v1:metadata.name)
+    Mounts:
+      /var/run/secrets/kubernetes.io/serviceaccount from kube-api-access-mx5wb (ro)
+Conditions:
+  Type                        Status
+  PodReadyToStartContainers   True 
+  Initialized                 True 
+  Ready                       False 
+  ContainersReady             False 
+  PodScheduled                True 
+Volumes:
+  kube-api-access-mx5wb:
+    Type:                    Projected (a volume that contains injected data from multiple sources)
+    TokenExpirationSeconds:  3607
+    ConfigMapName:           kube-root-ca.crt
+    Optional:                false
+    DownwardAPI:             true
+QoS Class:                   BestEffort
+Node-Selectors:              <none>
+Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists for 300s
+                             node.kubernetes.io/unreachable:NoExecute op=Exists for 300s
+Events:
+  Type     Reason     Age                   From               Message
+  ----     ------     ----                  ----               -------
+  Normal   Scheduled  22m                   default-scheduler  Successfully assigned default/inventory-797b767889-g6qrz to minikube
+  Normal   Pulled     22m                   kubelet            spec.containers{inventory}: Container image "inventory-app:1.0" already present on machine and can be accessed by the pod
+  Normal   Created    22m                   kubelet            spec.containers{inventory}: Container created
+  Normal   Started    22m                   kubelet            spec.containers{inventory}: Container started
+  Warning  Unhealthy  64s (x105 over 6m7s)  kubelet            spec.containers{inventory}: Readiness probe failed: HTTP probe failed with statuscode: 503
