@@ -201,13 +201,7 @@ kubectl delete pod $POD1
 
 Text files: `pods-before-deletion.txt`, `pods-after-replacement.txt`, `endpoints-after-replacement.txt`, `client-logs-after-deletion.txt`, `events.txt`, `error-count.txt` (in `Evidences/`).
 
-## Reflection
+## Why is a stable Service name useful when Pods can fail or be replaced?
 
 A stable Service name is useful because Pods can fail or be replaced, and each new Pod gets a new name and a new IP. The client does not need to know about this, because it always calls the same name, `inventory-service`. In my test, one Pod became unready and another Pod was deleted, and the client still worked without any change. Kubernetes updates the list of Pods behind the Service by itself. Because of this, the client and the Pods are not tightly connected, and the system can recover on its own.
 
-## Clean Up
-
-```bash
-kubectl delete -f k8s/
-minikube stop
-```
